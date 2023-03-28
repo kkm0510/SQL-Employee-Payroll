@@ -48,4 +48,31 @@ mysql> select * from employee_payroll;
 +----+---------+---------+------------+
 3 rows in set (0.00 sec)
 
+mysql> select salary from employee_payroll where name='Bill';
++---------+
+| salary  |
++---------+
+| 1000000 |
++---------+
+1 row in set (0.01 sec)
+
+mysql> select salary salary from employee_payroll where start between cast('2018-01-01' as date) and date (now());
++---------+
+| salary  |
++---------+
+| 1000000 |
+| 2000000 |
+| 3000000 |
++---------+
+3 rows in set (0.01 sec)
+
+mysql> select name, salary from employee_payroll where start between cast('2018-01-01' as date) and date (now());
++---------+---------+
+| name    | salary  |
++---------+---------+
+| Bill    | 1000000 |
+| Mark    | 2000000 |
+| Charlie | 3000000 |
++---------+---------+
+3 rows in set (0.00 sec)
 
