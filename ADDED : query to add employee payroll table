@@ -30,4 +30,8 @@ mysql> show databases;
 
 mysql> use payroll_service;
 Database changed
+create table employee_payroll' at line 2
+mysql> create table employee_payroll(id int unsigned not null auto_increment, name varchar(150) not null, salary Double not null, start date not null, primary key (id));
+Query OK, 0 rows affected (0.09 sec)
+
 mysql>
